@@ -39,5 +39,5 @@ from bs4 import BeautifulSoup
 url = 'http://py4e-data.dr-chuck.net/known_by_Samantha.html'
 
 for i in range(7):
-    url = [ tag.get('href', None) for tag in BeautifulSoup(urlopen(url), "html.parser")('a') ][17]
+    url = [ tag.get('href') for tag in BeautifulSoup(urlopen(url), "html.parser")('a') ][17]
     print(url)
